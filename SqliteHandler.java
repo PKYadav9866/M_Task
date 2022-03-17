@@ -1,8 +1,10 @@
+// this program is writed for handle sql related things and implemented some functions here
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SqliteHandler{
+  // inserting movie into movies table 
 	public static void insertMovie(Statement statement,Movie movie){
 		String insert = "INSERT INTO Movies" + " values ('" + movie.getName() + "','" + movie.getActor()
 				+ "','" + movie.getDirector() + "'," + movie.getYear() + ")";
@@ -21,7 +23,7 @@ public class SqliteHandler{
 		}
 		return null;
 	}
-
+  // fetch movie function implemented here that we are used to fatch movie in main .java
 	public static Movie fatchMovie(ResultSet resultset){
 		Movie movie;
 		try{
